@@ -1,0 +1,253 @@
+*{
+	margin:0;
+	padding:0;
+	border:none;
+	outline:none;
+}
+
+body{
+	font-family:Arial;
+	font-size:13px;
+	line-height:1.5em;
+	color:#fff;
+    background: #fdc584; /* Old browsers */
+	background: -moz-linear-gradient(left, #00e0ed 0%, #97e5c9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#00e0ed), color-stop(100%,#6d8a9f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #00e0ed 0%,#97e5c9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #00e0ed 0%,#97e5c9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #00e0ed 0%,#97e5c9 100%); /* IE10+ */
+	background: linear-gradient(to right, #00e0ed 0%,#97e5c9 100%); /* W3C */
+	 
+}
+
+.clearfix{
+	clear:both;
+}
+
+#container{
+	width:330px;
+	min-height:400px;
+	background:#247a86;
+	overflow:auto;
+	margin:20px auto;
+	border-radius:10px;
+	box-shadow:0 10px 8px -8px #333;
+}
+
+#audio-image{
+	position:relative;
+	overflow:hidden;
+	height:200px;
+    margin-bottom:15px;
+    padding:20px;
+}
+
+#audio-image .cover{
+	width:100%;
+}
+
+#audio-info{
+	text-align:center;
+}
+
+#audio-info .artist{
+	font-weight:bold;
+}
+a#minus{
+    margin-left: 10px;
+    font-size: 27px;
+    font-weight: 700;
+}
+a#plus{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+input#volume{
+	width:79%;
+	margin-left:4%;
+	-webkit-appearance:none !important;
+	background:#ccc;
+	height:1px;
+	margin-bottom:20px;
+}
+input#volume::-webkit-slider-thumb{
+	-webkit-appearance:none !important;
+	background:url('../images/circular-shape.png') no-repeat;
+	height:16px;
+	width:16px;
+}
+
+#buttons{
+	width:90%;
+	display:block;
+	margin:15px auto;
+	margin-left:23px;
+	overflow:auto;
+}
+#playall{
+    color:#fff;
+    margin-left:30px
+}
+.sub-buttons{
+    width: 90%;
+    display: block;
+    margin: 15px auto;
+    margin-left: 23px;
+    overflow: auto;
+}
+a#mute{
+    width:16px;
+	height:16px;
+	background:url('../images/mute.png') no-repeat;
+	float:left;
+    margin-left:-2px;
+}
+a#unmute{
+    width:16px;
+	height:16px;
+	background:url('../images/volume-unmuted.png') no-repeat;
+	float:left;
+    margin-left:-2px;
+}
+a#repeat{
+    width:16px;
+	height:16px;
+	background:url('../images/repeat.png') no-repeat;
+	float:left;
+    margin-left: 30px;
+}
+a#repeated{
+    width:16px;
+	height:16px;
+	background:url('../images/repeated.png') no-repeat;
+	float:left;
+    margin-left: 30px;
+}
+a#play{
+	width:70px;
+	height:70px;
+	background:url('../images/play-arrow.png') no-repeat;
+	float:left;
+    margin-left:-2px;
+    margin-top: 10px;
+ }
+
+a#pause{
+	width:70px;
+	height:70px;
+	background:url('../images/pause-button.png') no-repeat;
+	float:left;
+    margin-left:-2px;
+    margin-top: 10px;
+}
+
+a#stop{
+	width:70px;
+	height:70px;
+	background:url('../images/stop.png') no-repeat;
+	float:left;
+    margin-left:3px;
+    margin-top: 10px;
+}
+
+a#prev{
+	width:70px;
+	height:70px;
+	background:url('../images/arrow-left.png') no-repeat;
+	float:left;
+	margin-top:15px;
+}
+
+a#next{
+	width:70px;
+	height:70px;
+	background:url('../images/forward-button.png') no-repeat;
+	float:right;
+	margin-top:15px;
+}
+
+#tracker{
+	position:relative;
+	width:100%;
+}
+
+#seek{
+	width:80%;
+	margin-left:2%;
+	margin-bottom:20px;
+	margin-top:9px;
+    height:10px;
+     
+    float:left;
+    border-radius: 2px
+}
+
+#progress{
+    background: #617b82;
+	height:10px;
+    display:inline-block;
+    border-radius: 2px
+}
+
+#duration{
+	position:absolute;
+	top:0;
+	right:10px;
+	padding: 4px 8px;
+	background:#555;
+	border-radius:5px;
+}
+
+#playlist{
+    list-style:none;
+    padding:5px
+}
+#playlist li{
+	cursor:pointer;
+	margin:5px;
+}
+#playlist li.active{
+	font-weight: bold;
+    padding: 5px;
+    background: #60b39e;
+    border-radius: 3px;
+}
+ 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #seek {
+      overflow: hidden;
+      -webkit-appearance: none;
+      background-color: #555;
+    }
+    
+    #seek::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      color: #4ad481;
+      margin-top: -1px;
+    }
+    
+    #seek::-webkit-slider-thumb {
+      width: 10px;
+      -webkit-appearance: none;
+      height: 10px;
+      cursor: ew-resize;
+      background: #fff;
+      box-shadow: -200px 0 0 200px #4ad481;
+    }
+
+}
+/** FF*/
+#seek::-moz-range-progress {
+  background-color: #4ad481; 
+}
+#seek::-moz-range-track {  
+  background-color: #555;
+}
+/* IE*/
+#seek::-ms-fill-lower {
+  background-color: #4ad481; 
+}
+#seek::-ms-fill-upper {  
+  background-color: #555;
+}

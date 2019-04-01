@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>HTML5 Audio Player</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="container">
+		<div id="audio-image">
+			<img class="cover">
+		</div>
+		<div id="audio-player">
+			<div id="audio-info">
+				Now Playing : <span class="artist"></span> - <span class="title"></span>
+            </div>
+            <a id="minus">-</a>
+            <input id="volume" type="range" min="0" max="10" value="4">
+            <a id="plus">+</a>
+			<br>
+			<div id="buttons">
+				<span>
+					<a id="prev"></a>
+					<a id="play"></a>
+					<a id="pause"></a>
+					<a id="stop"></a>
+					<a id="next"></a>
+                </span>
+                
+            </div>
+            <div class="sub-buttons">
+                <a id="mute"></a>
+                <a id="unmute"></a>
+                <a id="playall"> Play All</a>
+                <a id="repeat"></a>
+                <a id="repeated"></a>
+            </div>
+			<div class="clearfix"></div>
+			<div id="tracker">
+                <input class="slider" id="seek" type="range" step="any" min="0" max="100" value="0"/>
+				<span id="duration"></span>
+			</div>
+			<div class="clearfix"></div>
+			<ul id="playlist" class="hidden">
+				<li class="active" song="Depeche Mode - Heaven (Freemasons Mix).mp3" cover="Depeche Mode - Heaven (Freemasons Mix).jpg" artist="Freemasons Mix">Depeche Mode - Heaven (Freemasons Mix).mp3</li>
+				<li song="Goldfrapp - Fly Me Away.mp3" cover="Goldfrapp - Fly Me Away.jpg" artist="Goldfrapp">Goldfrapp - Fly Me Away.mp3</li>
+				<li song="Goldfrapp - Number 1.mp3" cover="Goldfrapp - Number 1.jpg" artist="Goldfrapp">Goldfrapp - Number 1.mp3</li>
+				<li song="Hurts - Wonderful Life (Freemasons Mix).mp3" cover="Hurts - Wonderful Life (Freemasons Mix).jpg" artist="Hurts">Wonderful Life (Freemasons Mix).mp3</li>
+				<li song="The Cranberries - I Cant Be With You.mp3" cover="The Cranberries - I Cant Be With You.jpg" artist="The Cranberries">I Cant Be With You.mp3</li>
+			</ul>
+		</div>
+	</div>
+	
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
